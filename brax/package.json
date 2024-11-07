@@ -1,0 +1,21 @@
+{
+  "name": "birthday-invitation",
+  "version": "1.0.0",
+  "description": "Birthday RSVP application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  },
+  "engines": {
+    "node": "16.x"
+},
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+  
+}

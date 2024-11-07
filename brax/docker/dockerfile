@@ -1,0 +1,22 @@
+# docker/Dockerfile
+FROM node:16
+
+WORKDIR /usr/src/app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy server files
+COPY server/ ./server/
+
+# Copy client files
+COPY client/ ./client/
+
+# Expose the port your app runs on
+EXPOSE 3000
+
+# Command to run the application
+CMD ["node", "server/server.js"]

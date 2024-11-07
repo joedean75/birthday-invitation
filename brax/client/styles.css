@@ -1,0 +1,111 @@
+.mountains-of-christmas-regular {
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.mountains-of-christmas-bold {
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    margin: 0; /* Remove default body margin */
+    background-color: #f9f9f9; /* Light background for contrast */
+    font-family: 'Mountains of Christmas', cursive; /* Use Mountains of Christmas font */
+    text-align: center;
+    color: #333;
+}
+
+.invitation-wrapper {
+    background: linear-gradient(to bottom, #c0392b, #27ae60); /* Red-green gradient */
+    padding: 30px; /* Optional: Add padding around the invitation */
+    margin: 0; /* Ensure no margin is applied to the wrapper */
+}
+
+.invitation {
+    margin: 20px auto; /* Center the invitation */
+    padding: 20px;
+    border: 5px solid #000;
+    border-radius: 10px;
+    background-image: url('assets/paper_text.jpg'); /* Use a parchment texture image */
+    background-size: cover; /* Cover the entire invitation */
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center; /* Center text within the invitation */
+}
+
+h1 {
+    font-size: 4em; /* Set to 1.5 times the size of the rest of the text */
+    color: #c0392b; /* Red color for the text */
+    margin: 0; /* Remove default margin */
+    margin-bottom: 0px; /* Adjust this value to reduce space */
+}
+
+.highlight {
+    display: block; /* Change to block to center it */
+    margin: 0 auto; /* Center the image */
+    width: 100%; /* Adjust width as needed */
+    max-width: 600px;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 0; /* Remove margin below the image */
+    padding: 0; /* Ensure no padding is applied */
+    line-height: 0; /* Set line-height to 0 to eliminate extra space */
+}
+
+
+
+@media (max-width: 767px) {
+    .highlight {
+        width: 90%; /* Adjust the width for mobile screens */
+    }
+}
+
+h2 {
+    font-size: 3em;
+    margin: 0; /* Remove default margin */
+    margin-top: 0; /* Ensure no top margin */
+    margin-bottom: 5px; /* Adjust this value to control space below h2 */
+    font-family: 'Merriweather', serif; /* Use Merriweather font for a festive look */
+}
+
+p {
+    font-size: 2.5em; /* Base font size for paragraphs */
+    margin: 0; /* Remove default margin */
+    margin-top: 5px; /* Optional: Add a small margin if needed */
+    line-height: 1; /* Set line-height to 1 for paragraphs */
+}
+
+form {
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #27ae60; /* Green border */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #c0392b; /* Red background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: #a93226; /* Darker red on hover */
+}
+
+/* Add a festive ornament image */

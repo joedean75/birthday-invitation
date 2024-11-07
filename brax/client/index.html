@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braxton's Birthday Invitation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@0;1&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="invitation-wrapper">
+        <div class="invitation">
+            <h1 class="mountains-of-christmas-bold">He's a Mean</h1>
+            <img src="assets/one.svg" alt="Highlight Image" class="highlight">
+            <p class="mountains-of-christmas-regular">Please join us for</p>
+            <h2>Braxton's 1st Birthday</h2>
+            <p><strong>SATURDAY</strong></p>
+            <p>DEC 7</p>
+            <p>12pm-2pm</p>
+            <p>Lifestream Church</p>
+            <p>6561 Lake Michigan Dr.</p>
+            <p>Allendale, MI 49401</p>
+            <p>RSVP to Jordan</p>
+            <p>616.283.6178</p>
+            
+            <form id="rsvp-form" action="/rsvp" method="POST">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="tel" id="phone" placeholder="Your Phone Number" required>
+                <button type="submit">RSVP</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
