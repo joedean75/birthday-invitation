@@ -4,7 +4,9 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
-const RSVPS_FILE = path.join(__dirname, 'rsvps.json');
+const RSVPS_FILE = process.env.NODE_ENV === 'production' 
+    ? '/tmp/rsvps.json'
+    : path.join(__dirname, 'rsvps.json');
 
 // Initialize rsvps.json with empty array
 try {
@@ -56,3 +58,5 @@ app.get('/rsvps', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+module.exports = app;
