@@ -4,6 +4,13 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
 
+// Add at the top with other requires
+const forceSsl = (req, res, next) => {
+    if (req.headers['x-forwarded-proto'] !== 'https' && process.env.NODE_ENV === 'production') {
+        return res.redirect(['https://', req.get('Host'), req.url].join(''));
+    }
+    return next();
+};
 const RSVPS_FILE = process.env.NODE_ENV === 'production' 
     ? '/tmp/rsvps.json'
     : path.join(__dirname, 'rsvps.json');
@@ -22,6 +29,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
+app.use(forceSsl);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client'))); 
