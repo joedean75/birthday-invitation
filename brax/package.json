@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js",
-    "build": "echo 'No build step required'"
+    "build": "mkdir -p /tmp && touch /tmp/rsvps.json && echo '[]' > /tmp/rsvps.json"
   },
   "dependencies": {
     "express": "^4.17.1",
